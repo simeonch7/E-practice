@@ -1,0 +1,2 @@
+module TableBottlesHelper
+end

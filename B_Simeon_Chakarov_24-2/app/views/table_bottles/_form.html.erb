@@ -1,0 +1,27 @@
+<%= form_with(model: table_bottle, local: true) do |form| %>
+  <% if table_bottle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(table_bottle.errors.count, "error") %> prohibited this table_bottle from being saved:</h2>
+
+      <ul>
+      <% table_bottle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :table_id %>
+    <%= form.number_field :table_id, id: :table_bottle_table_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bottle_id %>
+    <%= form.number_field :bottle_id, id: :table_bottle_bottle_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
