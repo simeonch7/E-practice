@@ -1,6 +1,3 @@
-# E-practice
-practice for ToP
-
 1. /bin/bash --login
 2. rails new B_24_Simen_Chakarov
 3. gedit Gemfile -> gem 'therubyracer'
@@ -31,6 +28,13 @@ class TeacherSchoolclass < ApplicationRecord
 	belongs_to :teacher
 end
 
+За x2 в Controllers:
+def index
+    @teacher_schoolclasses = TeacherSchoolclass.all
+    @teachers = Teacher.all
+		@schoolclasses = Schoolclass.all
+end
+
 Unique adress:
 
 Route:
@@ -44,4 +48,5 @@ HTML:
         <td><%= teacher_schoolclass.schoolclass.day%></td>
       </tr>
 <% end %>
+
 
